@@ -75,10 +75,13 @@ header
 
 .product-info
 {
-    flex: 1; /* This makes the info take up available space */
+    display: flex; /* This makes the info take up available space */
     max-width: 50%; /* Limit the width to half of the container */
-    background-color: #e0e0e0;
+    background-color: transparent;
     padding: 20px;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
 }
 .main-image
 {
@@ -113,8 +116,36 @@ header
 
 #title
 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    color: grey;
 }
+
+.product-info h1{
+    font-size: 2.5rem;
+}
+
+.buttons
+{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    gap: 10px;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.button {
+    width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+
+
 
 
 .attribution

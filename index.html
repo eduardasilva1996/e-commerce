@@ -63,19 +63,47 @@
 
         <h2>$125.00</h2>
         <div class="buttons">
-        <button> quantity </button>
-        <button> add to cart</button>
+        <button class="button">-</button>
+        <span id="number-display">0</span>
+        <button class="button"> + </button>
         </div>
+        
+        <button> add to cart</button>
+        
 
 
       </div>
   </div>
   
   
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
 </html>
+
+<!-- Javascript fucntions -->
+
+<script>
+// TODO: fucntion for the quantity button;
+
+// To make the update of the main image when i click on any thumbnail image.
+
+const mainImage = document.getElementById('big-image');
+
+const thumbnailImg = document.querySelectorAll('.thumbnail')
+
+thumbnailImg.forEach(element => {
+  element.addEventListener('click',function() {
+
+    const currentPath = this.getAttribute('src');
+    const newPath = currentPath.replace('-thumbnail', '');
+    mainImage.src = newPath;
+  })
+});
+
+// alert('im working');
+
+
+</script>
