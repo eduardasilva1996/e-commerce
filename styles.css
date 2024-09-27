@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+font-family: Arial, sans-serif;
+background-color: #f8f8f8;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    /*this needs to be changed to match design later on*/
+    padding: 20px;
+    background-color: white;
+}
+
+.logo img {
+    width: 150px;
+}
+.nav-links
+{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a
+{
+    color: grey;
+    text-decoration: none; /* This removes the underline */
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#ff9800;
+}
+
+.header-icons
+{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#profile-pic
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;  
+}
+
+
+.container-main
+{
+    display: flex; /* This will align child elements side by side */
+    justify-content: space-between;
+    align-items: flex-start; /*this aligns the items at the top*/
+    padding: 100px;
+    gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.product-preview
+{
+    display: flex;  /*center the big image*/
+    max-width: 50%;
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product-info
+{
+    flex: 1; /* This makes the info take up available space */
+    max-width: 50%; /* Limit the width to half of the container */
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+.main-image
+{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 20px;
+}
+
+#big-image
+{
+    width: 55vh;
+    height: 55vh;
+    border-radius: 20px;
+}
+.thumbnail-grid
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    width: 60vh;
+}
+
+.thumbnail
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-left: 45px;
+    margin-top: 15px;
+}
+
+#title
+{
+    font-size: 1.5rem;
+}
+
+
+.attribution
+{ font-size: 11px; text-align: center; }
+.attribution a
+{ color: hsl(228, 45%, 44%); }
