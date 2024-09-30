@@ -63,47 +63,58 @@
 
         <h2>$125.00</h2>
         <div class="buttons">
-        <button class="button">-</button>
+        <button class="button" id="button-decrease">-</button>
         <span id="number-display">0</span>
-        <button class="button"> + </button>
+        <button class="button" id="button-increase"> + </button>
         </div>
         
         <button> add to cart</button>
-        
-
-
       </div>
   </div>
   
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Eduarda Silva</a>.
   </div>
-</body>
-</html>
 
-<!-- Javascript fucntions -->
-
+<!-- Javascript for Thumbnail Click to Update Main Image -->
 <script>
-// TODO: fucntion for the quantity button;
-
-// To make the update of the main image when i click on any thumbnail image.
-
+// Update the main image when clicking on any thumbnail image.
 const mainImage = document.getElementById('big-image');
+const thumbnailImages = document.querySelectorAll('.thumbnail');
 
-const thumbnailImg = document.querySelectorAll('.thumbnail')
-
-thumbnailImg.forEach(element => {
-  element.addEventListener('click',function() {
-
+thumbnailImages.forEach(element => {
+  element.addEventListener('click', function() {
     const currentPath = this.getAttribute('src');
     const newPath = currentPath.replace('-thumbnail', '');
     mainImage.src = newPath;
-  })
+  });
 });
 
-// alert('im working');
+const decreaseQty = document.getElementById('button-decrease');
+const increaseQty = document.getElementById('button-increase');
+const numberDisplay = document.getElementById('number-display');
+let number = 0;
+
+decreaseQty.addEventListener('click', () =>
+{
+  if(number>0)
+{
+  number--;
+}
+numberDisplay.innerHTML = number;
+
+})
+
+increaseQty.addEventListener('click', () =>
+{
+  number++;
+  numberDisplay.innerHTML = number;
+})
 
 
 </script>
+
+</body>
+</html>
